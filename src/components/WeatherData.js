@@ -7,27 +7,30 @@ const WeatherData = () => {
   const { temp, feels_like, humidity, pressure } = weather;
 
   return (
-    <div className="weather-data py-12">
-      <p className="weather-tagline">
-        Weather forecast for <span className="weather-data-city">{city}</span>
+    <div className="weather-data py-6">
+      <p className="weather-tagline text-center pb-2">
+        Weather in{" "}
+        <span className="weather-data-city text-blue-600">{city}</span>
       </p>
-      <div className="weather-data-box">
-        <span className="weather-data-property">
-          <p className="weather-data-title">Temperature</p>
-          <p className="weather-data-value">{temp}</p>
-        </span>
-        <span className="weather-data-property">
-          <p className="weather-data-title">Feels Like</p>
-          <p className="weather-data-value">{feels_like}</p>
-        </span>
-        <span className="weather-data-property">
-          <p className="weather-data-title">Humidity</p>
-          <p className="weather data-value">{humidity}</p>
-        </span>
-        <span className="weather-data-property">
-          <p className="weather-data-title">Pressure</p>
-          <p className="weather data-value">{pressure}</p>
-        </span>
+      <div className="flex justify-center">
+        <div className="weather-data-box grid grid-cols-2 grid-rows-2 gap-10">
+          <div className="weather-data-property border-4 border-blue-200 rounded-full max-w-max p-6">
+            <p className="weather-data-title">Temperature</p>
+            <p className="weather-data-value text-7xl">{temp}</p>
+          </div>
+          <div className="weather-data-property  border-4 border-blue-200 rounded-full max-w-max p-6">
+            <p className="weather-data-title">Feels Like</p>
+            <p className="weather-data-value text-7xl">{feels_like}</p>
+          </div>
+          <div className="weather-data-property border-4 border-blue-200 rounded-full max-w-max p-6">
+            <p className="weather-data-title">Humidity</p>
+            <p className="weather data-value text-7xl">{humidity}</p>
+          </div>
+          <div className="weather-data-property border-4 border-blue-200 rounded-full max-w-max p-6">
+            <p className="weather-data-title">Pressure</p>
+            <p className="weather data-value text-7xl">{pressure}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
