@@ -1,17 +1,14 @@
 import React from "react";
 import "./assets/main.css";
 
+import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import Main from "./components/Main";
 
 const App = () => {
   return (
-    <div className="container max-w-md mx-auto px-4 py-12">
-      <img
-        className="max-w-sm max-h-sm"
-        src="./logos/default-monochrome.svg"
-        alt=""
-      />
+    <div className="container mx-auto px-4 py-12">
+      <Header />
       <Wrapper>
         <Main />
       </Wrapper>
