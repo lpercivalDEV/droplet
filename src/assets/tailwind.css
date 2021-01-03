@@ -1,0 +1,24 @@
+/* tailwind stuff */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/screens";
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat:ital,wght@0,300;0,400;1,500&display=swap");
+
+body {
+  font-size: 28px;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-serif;
+}
+
+h4,
+h5,
+h6 {
+  @apply font-sans font-bold;
+}
