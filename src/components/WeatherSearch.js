@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 
-const WeatherSearch = (props) => {
+import Context from "../Context";
+
+const WeatherSearch = () => {
+  const { api_call } = useContext(Context);
+
   return (
-    <div className="weather-search">
-      <form onSubmit={props.api_call} className="weather-search-form">
+    <div className="weather-search pt-20">
+      <form onSubmit={api_call} className="weather-search-form">
         <input
+          name="location"
           type="text"
-          className="weather-search-input border-4 border-blue-100 rounded-2xl"
+          className="weather-search-input w-80 border-4 border-blue-100 rounded-2xl"
         />
         <div className="weather-search-submi focus-visible">
           <button
